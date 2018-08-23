@@ -13,12 +13,13 @@ function registerUser() {
     {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
+        mode: 'cors',
         body: JSON.stringify(user)
     })
-    .then(response => {
-        status_code  = response.status
-        return response.json()
-    })
+    // .then(response => {
+    //     status_code  = response.status
+    //     return response.json()
+    // })
     
     .catch(error => alert(error))
 }
