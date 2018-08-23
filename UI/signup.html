@@ -22,11 +22,10 @@
             <form class="login">
                 <fieldset>
                     <h2>Signup</h2>
-                    <input type="text" class="input-signup" placeholder="username" required minlength="6" maxlength="15">
-                    <input type="email" class="input-signup" placeholder="prossienakimera@gmail.com" required>
-                    <input type="password" class="input-signup" placeholder="password" required minlength="8" maxlength="20">
-                    <input type="password" placeholder="confirm password" required>
-                    <button type="submit" class="btn-login">Signup</button>
+                    <input type="text" class="input-signup" placeholder="username" required minlength="6" maxlength="15" id="username">
+                    <input type="email" class="input-signup" placeholder="example@gmail.com" required id="email">
+                    <input type="password" class="input-signup" placeholder="password" required minlength="8" maxlength="20" id="password">
+                    <button type="submit" class="btn-login" onclick="registerUser()">Signup</button>
                     <div class="form-footer center">
                         <h4> Have an account?</h4>
                         <h4>
@@ -37,5 +36,6 @@
             </form>
         </div>
     </div>
+    <script src="js/signup.js"></script>
 </body>
 
