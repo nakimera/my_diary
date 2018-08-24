@@ -44,7 +44,7 @@ def signup():
         return jsonify({"message": "User already exists. Please log in"}), 409
 
     user.create_user()
-    return jsonify({"message": "User successfully signed up"}), 201
+    return jsonify({"message": "Hooray! Account created. Please log in "}), 201
 
 @mod.route('/login', methods=['POST'])
 def login():
