@@ -16,10 +16,12 @@ function registerUser() {
         mode: 'cors',
         body: JSON.stringify(user)
     })
-    // .then(response => {
-    //     status_code  = response.status
-    //     return response.json()
-    // })
-    
+    .then(response => {
+        status_code  = response.status
+        result = response.json()
+        console.log(response)
+    })
+    .then(data=>{ console.log(data); })
     .catch(error => alert(error))
+    alert("User successfully added")
 }
