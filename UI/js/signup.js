@@ -16,12 +16,25 @@ function registerUser() {
         mode: 'cors',
         body: JSON.stringify(user)
     })
-    .then(response => {
-        status_code  = response.status
-        result = response.json()
-        console.log(response)
-    })
-    .then(data=>{ console.log(data); })
-    .catch(error => alert(error))
-    alert("User successfully added")
+
+    .then(
+        function(response) {
+            result = response.json();
+            result.then(function(data) {
+                console.log(data)
+            });
+        }
+    )
 }
+
+
+
+
+
+
+
+
+
+
+
+            //     window.location = '../UI/index.html';
