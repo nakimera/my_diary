@@ -25,15 +25,17 @@
                     <input type="text" class="input-signup" placeholder="username" required id="username">
                     <input type="email" class="input-signup" placeholder="example@gmail.com" required id="email">
                     <input type="password" class="input-signup" placeholder="password" required id="password">
-                    <button class="btn-login">Login</button>
+                    <button class="btn-login" type="button" onclick="loginUser()">Login</button>
                     <div>
-                        <h4>Have no account?
-                            <a href="signup.html">Sign up!</a>
+                        <h4 id="message" style=" color: red;"><h4>
+                        <h4>
+                            Have no account?<a href="signup.html">Sign up!</a>
                         </h4>
                     </div>
                 </fieldset>
             </form>
         </div>
     </div>
+    <script src="js/login.js"></script>
 </body>
 
