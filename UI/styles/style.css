@@ -12,10 +12,6 @@ html, body {
     border:0;
 }
 
-input {
-    vertical-align:middle;
-}
-
 *{
     text-decoration: none;
 }
@@ -124,13 +120,13 @@ p {
 }
 
 form {
-    padding: 20px 0 20px 20px;
-    width: 300px;
+    padding: 20px;
+    width: 290px;
     background-color: white;
 }
 
 input {
-    width: 90%;
+    width: 95%;
     height: 30px;
     margin: 20px 0;
     border: solid 1px saddlebrown;

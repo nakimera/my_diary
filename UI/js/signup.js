@@ -19,22 +19,26 @@ function registerUser() {
 
     .then(
         function(response) {
-            result = response.json();
+
+            if (response.status !=201) {
+                result = response.json();
             result.then(function(data) {
-                console.log(data)
+                document.getElementById('message').innerHTML=data['message'];
             });
+            }
+
+            else {
+                window.location = '../UI/index.html';
+            }
+            
+        }
+        
+    )
+    .catch(
+        function(error) {
+            console.log('Request failed', error);
+            alert('Ooops! Request failed. Please try again');
         }
     )
 }
 
-
-
-
-
-
-
-
-
-
-
-            //     window.location = '../UI/index.html';

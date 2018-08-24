@@ -22,7 +22,8 @@
 }
  
 .left  {
-    border: solid 15px white;
+    border: solid 10px white;
+    border-radius: 30px;
 }
 
 .right {
@@ -33,7 +34,7 @@
 
 .btn-login {
     background-color: saddlebrown;
-    width: 90%;
+    width: 100%;
     height: 32px;
     color: white;
     border: 0px;
