@@ -22,13 +22,18 @@ function registerUser() {
 
             if (response.status !=201) {
                 result = response.json();
-            result.then(function(data) {
-                document.getElementById('message').innerHTML=data['message'];
-            });
+                result.then(function(data) {
+                    document.getElementById('message').innerHTML=data['message'];
+                });
             }
 
             else {
-                window.location = '../UI/index.html';
+                result = response.json();
+                result.then(function(data) {
+                    window.alert(data['message']);
+                    window.location = '../UI/index.html';
+                }); 
+                
             }
             
         }
@@ -37,7 +42,7 @@ function registerUser() {
     .catch(
         function(error) {
             console.log('Request failed', error);
-            alert('Ooops! Request failed. Please try again');
+            alert('Ooops! Request failed. Please try again later');
         }
     )
 }
