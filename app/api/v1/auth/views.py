@@ -22,31 +22,44 @@ def signup():
     password = str(data.get("password")).strip()
 
     validate_email(email_address)
+    validate_username = username.isalpha()
 
     if not username:
         return jsonify({"message": "Please provide a username"}), 400
     
+    if len(username) < 5 or not validate_username:
+        return jsonify({
+            'message': "Username should be more than 5 letters of the alphabet"
+            }), 400
+    
     if not email_address:
-        return jsonify({"message": "Please provide an email address"}), 400
+        return jsonify({
+            "message": "Please provide an email address"
+            }), 400
 
     if not validate_email(email_address):
-        return jsonify({"message": "Please provide a valid email address"}), 400
+        return jsonify({
+            "message": "Please provide a valid email address"
+            }), 400
 
     if not password:
-        return jsonify({"message": "Please provide a password"}), 400
+        return jsonify({
+            "message": "Please provide a password"
+            }), 400
 
-    
     password_hash = generate_password_hash(data.get("password"), method='sha256')
     user = User(username, email_address, password_hash)
     user_exists = user.fetch_user(email_address)
 
     if user_exists:
-        return jsonify({"message": "User already exists. Please log in"}), 409
+        return jsonify({
+            "message": "User already exists. Please log in"
+            }), 409
 
     user.create_user()
     return jsonify({
         "message": "Hooooray! \nDiary account created. \nPlease log in "
-        }), 201
+    }), 201
 
 @mod.route('/login', methods=['POST'])
 def login():
