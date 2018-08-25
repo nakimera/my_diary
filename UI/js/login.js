@@ -18,15 +18,20 @@ function loginUser() {
     .then(
         function(response) {
 
-            result = response.json();
-            result.then(function(data) {
-            console.log(data);
-            document.getElementById('message').innerHTML=data['message'];
-            
-            });
+            if (response.status !=200) {
+                result = response.json();
+                result.then(function(data) {
+                    document.getElementById('message').innerHTML=data['message'];
+                
+                });
+            }
 
-            if (response.status == 200) {
-                // window.alert("Welcome")
+            else {
+                result = response.json();
+                result.then(function(data) {
+                    window.alert(data['message']);
+                    window.location = '../UI/entries.html';
+                });
             }
         }
     )
