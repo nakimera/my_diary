@@ -44,7 +44,9 @@ def signup():
         return jsonify({"message": "User already exists. Please log in"}), 409
 
     user.create_user()
-    return jsonify({"message": "Hooray! Account created. Please log in "}), 201
+    return jsonify({
+        "message": "Hooooray! \nDiary account created. \nPlease log in "
+        }), 201
 
 @mod.route('/login', methods=['POST'])
 def login():
@@ -75,8 +77,8 @@ def login():
         user_id = logged_in_user[0]
         token = user.encode_auth_token(user_id)
         return jsonify({
-                            "message": "You have successfully logged in",
-                            "token": token.decode('UTF-8')
-                        }), 200
+            "message":"Welcome to your diary " + user.username + "!",
+            "token": token.decode('UTF-8')
+        }), 200
     
     return jsonify({"message" : "User does not exist. Please try again"}), 404
