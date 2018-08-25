@@ -47,6 +47,11 @@ def signup():
             "message": "Please provide a password"
             }), 400
 
+    if len(password) < 6:
+        return jsonify({
+            "message": "Password is too short. Provide atleast 6 characters"
+            }), 400
+
     password_hash = generate_password_hash(data.get("password"), method='sha256')
     user = User(username, email_address, password_hash)
     user_exists = user.fetch_user(email_address)
@@ -67,12 +72,9 @@ def login():
     Method that logs in a user
     """
     data = request.get_json(force=True)
-    username = str(data.get("username")).strip()
+    username = None
     email_address = str(data.get("email_address")).strip()
     password = str(data.get("password")).strip()
-
-    if not username:
-        return jsonify({"message": "Please provide a username"}), 400
         
     if not password:
         return jsonify({"message": "Please provide a password"}), 400
@@ -83,15 +85,19 @@ def login():
     user = User(username, email_address, password)
     current_user = user.fetch_user(email_address)
 
-    compare_password = check_password_hash(current_user[3], password)
+    if current_user:
 
-    if compare_password == True and user.username == current_user[1]:
-        logged_in_user = current_user
-        user_id = logged_in_user[0]
-        token = user.encode_auth_token(user_id)
-        return jsonify({
-            "message":"Welcome to your diary " + user.username + "!",
-            "token": token.decode('UTF-8')
-        }), 200
+        compare_password = check_password_hash(current_user[3], password)
+
+        if compare_password == True:
+            logged_in_user = current_user
+            user_id = logged_in_user[0]
+            token = user.encode_auth_token(user_id)
+            return jsonify({
+                "message":"Welcome to your diary " + current_user[1] + "!",
+                "token": token.decode('UTF-8')
+            }), 200
     
-    return jsonify({"message" : "User does not exist. Please try again"}), 404
+    return jsonify({
+        "message" : "Either email address or password are incorrect. Try again"
+    }), 404

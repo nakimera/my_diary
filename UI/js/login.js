@@ -1,10 +1,8 @@
 function loginUser() {
-    username = document.getElementById('username').value;
     email_address = document.getElementById('email').value;
     password = document.getElementById('password').value;
 
     user = {
-        username: username,
         email_address: email_address,
         password: password
     }
