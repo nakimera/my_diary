@@ -3,7 +3,7 @@ function registerUser() {
     email_address = document.getElementById('email').value;
     password = document.getElementById('password').value;
 
-    user = {
+    var user = {
         username: username,
         email_address: email_address,
         password: password
@@ -39,6 +39,7 @@ function registerUser() {
         }
         
     )
+    
     .catch(
         function(error) {
             console.log('Request failed', error);

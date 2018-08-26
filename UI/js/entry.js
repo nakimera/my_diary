@@ -1,28 +1,31 @@
-function loginUser() {
-    email_address = document.getElementById('email').value;
-    password = document.getElementById('password').value;
+function addEntry() {
+    title = document.getElementById('title').value;
+    details = document.getElementById('details').value;
+    var token = window.localStorage.getItem('access-token');
 
-    var user = {
-        email_address: email_address,
-        password: password
+    var entry = {
+        title: title,
+        details: details
     }
 
-    fetch(host + '/api/v1/auth/login', 
+    fetch(host + '/api/v1/entries', 
     {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        headers: {
+            'Content-Type': 'application/json',
+            'access-token':  token
+        },
         mode: 'cors',
-        body: JSON.stringify(user)
+        body: JSON.stringify(entry)
     })
 
     .then(
         function(response) {
 
-            if (response.status !=200) {
+            if (response.status !=201) {
                 result = response.json();
                 result.then(function(data) {
-                    document.getElementById('message').innerHTML=data['message'];
-                
+                    alert(data['message'])
                 });
             }
 
@@ -31,7 +34,6 @@ function loginUser() {
                 result.then(function(data) {
                     window.alert(data['message']);
                     window.location.href = '../UI/entries.html';
-                    window.localStorage.setItem('access-token', data['token']);
                 });
             }
         }
