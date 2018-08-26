@@ -75,4 +75,3 @@ class DatabaseConnection:
         self.execute_query(query)
         self.conn.commit()
         self.conn.close()
-

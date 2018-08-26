@@ -9,7 +9,7 @@ function registerUser() {
         password: password
     }
 
-    fetch('http://127.0.0.1:5000/api/v1/auth/signup', 
+    fetch(host + '/api/v1/auth/signup', 
     {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
