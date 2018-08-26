@@ -23,7 +23,6 @@
  
 .left  {
     border: solid 10px white;
-    border-radius: 30px;
 }
 
 .right {
@@ -39,7 +38,7 @@
     color: white;
     border: 0px;
     margin-bottom: 20px;
-    border-radius: 5px;
+    border-radius: 25px;
 }
 
 .input-signup {

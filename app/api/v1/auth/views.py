@@ -20,6 +20,7 @@ def signup():
     username = str(data.get("username")).strip()
     email_address = str(data.get("email_address")).strip()
     password = str(data.get("password")).strip()
+    confirm_password = str(data.get("confirm_password")).strip()
 
     validate_email(email_address)
     validate_username = username.isalpha()
@@ -50,6 +51,16 @@ def signup():
     if len(password) < 6:
         return jsonify({
             "message": "Password is too short. Provide atleast 6 characters"
+            }), 400
+
+    if not confirm_password:
+        return jsonify({
+            "message": "Confirm password"
+            }), 400
+
+    if password != confirm_password:
+        return jsonify({
+            "message": "Passwords do not match"
             }), 400
 
     password_hash = generate_password_hash(data.get("password"), method='sha256')

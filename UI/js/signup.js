@@ -2,11 +2,13 @@ function registerUser() {
     username = document.getElementById('username').value;
     email_address = document.getElementById('email').value;
     password = document.getElementById('password').value;
+    confirm_password = document.getElementById('pswd').value;
 
     var user = {
         username: username,
         email_address: email_address,
-        password: password
+        password: password,
+        confirm_password: confirm_password
     }
 
     fetch(host + '/api/v1/auth/signup', 

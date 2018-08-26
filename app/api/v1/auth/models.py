@@ -13,10 +13,11 @@ class User():
     Model for the app users
     """
 
-    def __init__(self, username, email_address, password):
+    def __init__(self, username, email_address, password, confirm_password=False):
         self.username = username
         self.email_address = email_address
         self.password = password
+        self.confirm_password = confirm_password
         self.db = DatabaseConnection(APP_ENV)
 
     def create_user(self):
