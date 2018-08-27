@@ -77,10 +77,12 @@ textarea {
     margin-top: 20px;
     border: solid 1px saddlebrown;
     padding: 20px;
+    font-size: 1.5em;
 }
 
 .input-title {
     border: none;
     border-bottom: solid 1px saddlebrown;
     width: 92%;
+    font-size: 1.8em;
 }
