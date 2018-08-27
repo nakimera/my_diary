@@ -19,9 +19,10 @@ main > div {
  
 .left  {
     height: 25em;
-    border: solid 10px white;
+    border: solid 15px white;
     display: flex;
     align-items: center;
+    background-color:  saddlebrown;
 }
 
 .right {
