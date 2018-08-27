@@ -1,20 +1,16 @@
 
-.container {
+main {
     display: flex;
     flex-flow: row wrap;
-    height: calc(100vh + 70px);
     justify-content: center;
     align-items: center;
 }
 
-.bg-color {
-    background-color: rgb(139, 69, 19, 0.7);
-}
-
-.container > div {
+main > div {
     width: 500px;
-    height: 400px;
+    height: 100vh;
     margin: 20px;
+
 }
 
 .center {
@@ -22,7 +18,10 @@
 }
  
 .left  {
+    height: 20em;
     border: solid 10px white;
+    display: flex;
+    align-items: center;
 }
 
 .right {

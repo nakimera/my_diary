@@ -1,12 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Catamaran);
 @import url(https://fonts.googleapis.com/css?family=Courgette|Handlee|Merienda|Special+Elite);
 
-html, body {
+html {
     background-image: url(../images/2.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     line-height:1;
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+body {
+    background-color: rgb(139, 69, 19, 0.7);
     margin:0;
     padding:0;
     border:0;
@@ -76,7 +83,6 @@ h1 {
     font-family: 'Courgette', cursive;
     line-height: 70px;
     letter-spacing: 1px;
-    padding-top: 70px;
 }
 
 h2 {
