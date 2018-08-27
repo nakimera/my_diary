@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Catamaran);
 @import url(https://fonts.googleapis.com/css?family=Courgette|Handlee|Merienda|Special+Elite);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 
 html, body {
     background-image: url(../images/adult1.jpg);
@@ -48,15 +49,14 @@ header .header-brand {
 
 header nav ul {
     list-style:none;
-    display: block;
     margin: 0 auto;
     width: fit-content;
     margin-top: 15px;
+    /* float: right; */
 }
 
 header nav ul li {
     display: inline-block;
-    list-style: none;
     
 }
 
@@ -130,20 +130,19 @@ input {
     border: solid 1px saddlebrown;
     padding-left: 10px;
 }
-
+/* 
 .nav-right {
     float: right;
-}
+} */
 
 .center {
     text-align: center;
 }
 
 .btn-logout {
-    padding: 0;
-    width: 70px;
-    margin-right: 20px;
-    margin-top: -50px;
+    /* padding: 0; */
+    /* margin-right: 20px;
+    margin-top: -50px; */
     color: saddlebrown;
     background-color: white;
     border: solid saddlebrown 1px;

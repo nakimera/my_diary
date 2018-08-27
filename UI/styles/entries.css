@@ -11,11 +11,10 @@
 }
 
 .entries-container > div {
-    width: 80%;
+    width: 100%;
 }
 
 .card  {
-    height: 150px;
     background-color: white;
     margin: 20px;
 }
@@ -87,3 +86,29 @@ textarea {
     font-size: 1.5em;
     color: saddlebrown;
 }
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main > div {
+    width: 80%;
+    height: 100vh;
+    margin: 20px;
+
+}
+
+.fa-plus-circle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: saddlebrown;
+    font-size: 5em;
+}
+
+/* .nav-right {
+    float: right;
+} */
