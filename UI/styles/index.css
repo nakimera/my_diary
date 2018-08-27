@@ -18,7 +18,7 @@ main > div {
 }
  
 .left  {
-    height: 20em;
+    height: 25em;
     border: solid 10px white;
     display: flex;
     align-items: center;
