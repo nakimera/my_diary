@@ -13,7 +13,6 @@ function viewEntries() {
 
     .then(
         function(response) {
-
             if (response.status !=200) {
                 result = response.json();
                 result.then(function(data) {
@@ -25,22 +24,26 @@ function viewEntries() {
                 result = response.json();
                 result.then(function(data) {
                     if (data['message'] == 'You have no entries yet!'){
-                        // window.alert(data['message']);
                         document.getElementById('entries').innerHTML=data['message'];
                     }
                     else {
                         var myEntries = data['data'];
-                        console.log(myEntries);
-                        // var myDate = myEntries[x].entry_date;
                         for (x in myEntries) {
                             var myDate = myEntries[x].entry_date;
                             var title = myEntries[x].title;
                             var details = myEntries[x].details ;
+                            var entryId = myEntries[x].entry_id;
+                            entryIds = [];
+                            entryIds.push(entryId);
+                            console.log(entryIds);
 
-                            document.getElementById('entries').innerHTML += "<div>" + title + "</div>" 
+                            document.getElementById('entries').innerHTML += "<a href='view.html'>" 
+                            + "<div class='input-title'>" + title + "</div>" 
                             + "<div>" + myDate + "</div>"
                             + "<div>" + details + "</div>"
+                            + "</a>" 
                             + "<br><hr>";
+                            window.localStorage.setItem('entryIds', entryIds);
                         }
                     }
                 });

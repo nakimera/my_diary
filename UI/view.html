@@ -8,19 +8,20 @@
     <link rel="stylesheet" type="text/css" media="screen" href="styles/style.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="styles/view.css" />
 </head>
-<body>
+<body onload="viewEntry()">
     <header>
             <nav class="center nav-right">
                     <ul>
                         <li><a href="home.html" class="header-brand ">My Diary</a></li>
                         <li><a href="profile.html">Profile</a></li>
-                        <li><button class="btn-logout">Logout</button></li>
+                        <li><button class="btn-logout" onclick="logOut()">Logout</button></li>
                     </ul>
                 </nav>
     </header>
     <main>
         <div class="entry center"> 
-            <p>That Wakanda babe</p>
+            <p id="entry"></p>
+            <!-- <p>That Wakanda babe</p>
             <p>
                 When I received Challenge One of the Andela Women Tech Leadership Program, I was super excited about the idea of building a working application from scratch. 
                 As an artist by talent, and designer by choice, I came up with a few mock-ups of my desired application using Balsamiq mock-up tool. 
@@ -52,8 +53,10 @@
                 I added a title and moved on. I had to select one option from feature, bug and chore.
                  I picked feature for no good reason. I kept moving on until I realized I had no clue 
                  about what the tool does or how to use it.
-            </p>
+            </p> -->
         </div>
         <a href="#" class="fa fa-pencil"></a>
+        <script src="js/global.js"></script>
+        <script src="js/view.js"></script>
     </main>
 </body>
