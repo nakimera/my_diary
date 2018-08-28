@@ -70,7 +70,7 @@ def entry(user_id):
 def indiv_entry(user_id, entry_id):
     entry = Entry(None, None, None)
 
-    one_entry = entry.fetch_user_entry(entry_id)
+    one_entry = entry.fetch_user_entry(user_id, entry_id)
 
     if not one_entry:
         """

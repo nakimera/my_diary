@@ -52,7 +52,7 @@ class Entry():
         return entries
         
 
-    def fetch_user_entry(self, entry_id):
+    def fetch_user_entry(self, user_id, entry_id):
         """
         Method that fetches a single user entry from the entries db
         """
@@ -60,8 +60,8 @@ class Entry():
         query = """
                     SELECT * 
                     FROM entries
-                    WHERE entry_id={}
-                """.format(entry_id)
+                    WHERE entry_id={} AND user_id={}
+                """.format(entry_id, user_id)
 
         record = self.db.execute_query(query, fetch_one_record=True)
         return record
