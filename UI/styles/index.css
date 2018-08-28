@@ -4,13 +4,14 @@ main {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    background-color: rgb(0, 0, 0, 0.5);
+    margin-top: 80px;
 }
 
 main > div {
     width: 500px;
     height: 100vh;
     margin: 20px;
-
 }
 
 .center {
@@ -19,10 +20,9 @@ main > div {
  
 .left  {
     height: 25em;
-    border: solid 15px white;
     display: flex;
     align-items: center;
-    background-color:  saddlebrown;
+    background-color:  rgb(139, 69, 19, 0.7);
 }
 
 .right {

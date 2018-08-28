@@ -1,11 +1,12 @@
 .btn-save {
-    margin-top: 20px;
     margin-bottom: 20px;
+    color: white;
+    background-color: saddlebrown;
 }
 
 .entries-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column wrap;
     justify-content: center;
     align-items: center;
 }
@@ -25,7 +26,7 @@
 
 .card-row {
     display: flex;
-    flex-direction: row;
+    flex-direction: row wrap;
 }
 
 .card-row > div {
@@ -35,7 +36,7 @@
 
 .card-row-split{
     display: flex;
-    flex-direction: row;
+    flex-direction: row wrap;
 }
 
 .card-row-split > div {
@@ -47,11 +48,10 @@
 }
 
 .entry {
-    width: 70%;
+    width: 80%;
     background-color: white;
     margin-bottom: 30px;
-    overflow: hidden;
-    /* background-image: url('../images/desk.png'); */
+    height: 150vh;
 }
 
 .brown {
@@ -69,19 +69,17 @@ span {
 
 textarea {
     width: 90%;
-    height: 30rem;
-    /* margin-top: 20px; */
+    height: 80%;
+    margin-bottom: 20px;
     border: solid 1px saddlebrown;
     padding: 20px;
-    font-size: 1.5em;
+    font-size: 1.8em;
     border: none;
-    /* border-top: solid black 1px; */
-    /* background-image: url('../images/desk.png') */
+    background-image: url('../images/desk.png');
 }
 
 .input-title {
     border: none;
-    /* border-bottom: solid 1px saddlebrown; */
     width: 92%;
     font-size: 1.5em;
     color: saddlebrown;
@@ -92,6 +90,8 @@ main {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    background-color: rgb(0, 0, 0, 0.5);
+    margin-top: 100px;
 }
 
 main > div {
@@ -101,14 +101,3 @@ main > div {
 
 }
 
-.fa-plus-circle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    color: saddlebrown;
-    font-size: 5em;
-}
-
-/* .nav-right {
-    float: right;
-} */

@@ -1,0 +1,65 @@
+.counter {
+    background-color: white;
+    width: 70%;
+}
+
+.counter-footer {
+    width: 70%;
+    background-color: saddlebrown;
+    height: 2em;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+} 
+
+p {
+    font-size: 30px;
+    color: saddlebrown;
+    font-weight: 980;
+    font-family: 'Courgette', cursive;
+    letter-spacing: 1px;
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+main > div {
+    width: 500px;
+    height: 500px;
+    margin: 20px;
+    margin-top: 150px;
+}
+
+.center {
+    text-align: center;
+}
+ 
+.left  {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.left > div {
+    margin: 10px;
+}
+
+.right {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-user-circle {
+    font-size: 200px;
+    color: saddlebrown;
+}

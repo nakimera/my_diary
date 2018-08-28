@@ -30,7 +30,7 @@ function loginUser() {
                 result = response.json();
                 result.then(function(data) {
                     window.alert(data['message']);
-                    window.location.href = '../UI/entries.html';
+                    window.location.href = '../UI/home.html';
                     window.localStorage.setItem('access-token', data['token']);
                 });
             }

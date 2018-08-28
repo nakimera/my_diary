@@ -22,6 +22,8 @@ header{
     width: 100%;
     height: 70px;
     padding-top: 30px;
+    position: fixed;
+    top: 0;
 }
 
 
@@ -52,7 +54,6 @@ header nav ul {
     margin: 0 auto;
     width: fit-content;
     margin-top: 15px;
-    /* float: right; */
 }
 
 header nav ul li {
@@ -130,23 +131,24 @@ input {
     border: solid 1px saddlebrown;
     padding-left: 10px;
 }
-/* 
-.nav-right {
-    float: right;
-} */
 
 .center {
     text-align: center;
 }
 
 .btn-logout {
-    /* padding: 0; */
-    /* margin-right: 20px;
-    margin-top: -50px; */
     color: saddlebrown;
     background-color: white;
     border: solid saddlebrown 1px;
     width: 80px;
     height: 30px;
     border-radius: 5px;
+}
+
+.fa-plus-circle , .fa-pencil{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: yellow;
+    font-size: 3.5em;
 }

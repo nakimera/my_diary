@@ -6,30 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Diary</title>
     <link rel="stylesheet" type="text/css" media="screen" href="styles/style.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="styles/entries.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/home.css" />
 </head>
 <body>
     <header>
-        <a href="index.html" class="header-brand">My Diary</a>
-        <nav class="center">
+        <nav class="center nav-right">
             <ul>
-                <li><a href="entry.html">Write new entry</a></li> 
-                <li><a href="entries.html">My entries</a></li> 
-                <li><a href="myaccount.html">My account</a></li> 
-                <li class="nav-right"><button class="btn-logout">Logout</button></li>
+                <li><a href="home.html" class="header-brand ">My Diary</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><button class="btn-logout">Logout</button></li>
             </ul>
-        </nav>
+        </nav>    
     </header>
-    <div class="entries-container bg-color">
-        <div>
-            <h3>Pen down your thoughts & feelings</h3>
-        </div>
+    <main>
         <div class="entry center"> <br>
-                <input type="text" placeholder="Title here ..." class="input-title" id="title"> 
-                <textarea id="details" placeholder="Write something ..."></textarea>
-                <button class="btn-logout btn-save" type="button" onclick="addEntry()">Save</button>
+            <input type="text" placeholder="Title here ..." class="input-title" id="title"> 
+            <textarea id="details" placeholder="Write something ..."></textarea>
+            <button class="btn-logout btn-save" type="button" onclick="addEntry()">Save</button>
         </div>
-    </div>
+        <a href="entry.html" class="fa fa-plus-circle"></a>
+    </main>
     <script src="js/entry.js"></script>
     <script src="js/host.js"></script>
 </body>
