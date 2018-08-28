@@ -4,49 +4,20 @@
     background-color: saddlebrown;
 }
 
-.entries-container {
-    display: flex;
-    flex-direction: column wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.entries-container > div {
-    width: 100%;
-}
 
 .card  {
-
+    display: flex;
+    flex-flow: row wrap;
     padding: 20px;
-    background-image: url(../images/desk.png);
+    background-image: url(../images/paper.jpg);
 }
 
 .card > div {
-    height: 50%;
+    height: 50px;
+    width: calc(100%/3);
+    overflow: hidden;
 }
 
-.card-row {
-    display: flex;
-    flex-direction: row wrap;
-}
-
-.card-row > div {
-    width: 33.3%;
-    padding: 30px;
-}
-
-.card-row-split{
-    display: flex;
-    flex-direction: row wrap;
-}
-
-.card-row-split > div {
-    width: 33.3%;
-}
-
-.border-bottom {
-    border-bottom: solid rgb(139, 69, 19) 2px;
-}
 
 .entry {
     width: 80%;
@@ -102,3 +73,6 @@ main > div {
 
 }
 
+hr {
+    width: 100%;
+}

@@ -31,9 +31,15 @@ function viewEntries() {
                     else {
                         var myEntries = data['data'];
                         console.log(myEntries);
+                        // var myDate = myEntries[x].entry_date;
                         for (x in myEntries) {
-                            document.getElementById('entries').innerHTML += myEntries[x].title 
-                            + myEntries[x].entry_date 
+                            var myDate = myEntries[x].entry_date;
+                            var title = myEntries[x].title;
+                            var details = myEntries[x].details ;
+
+                            document.getElementById('entries').innerHTML += "<div>" + title + "</div>" 
+                            + "<div>" + myDate + "</div>"
+                            + "<div>" + details + "</div>"
                             + "<br><hr>";
                         }
                     }
