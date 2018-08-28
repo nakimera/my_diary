@@ -53,6 +53,12 @@ def entry(user_id):
 
         entry = Entry(None, None, None)
         entries = entry.fetch_user_entries(user_id)
+
+        if entries == []:
+            return jsonify({
+            "message": "You have no entries yet!"
+        }), 200
+
         return jsonify({
             "message": "All entries successfully retrieved",
             "data": entries

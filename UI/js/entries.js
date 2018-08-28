@@ -24,8 +24,19 @@ function viewEntries() {
             else {
                 result = response.json();
                 result.then(function(data) {
-                    // window.alert(data['message']);
-                    console.log(data)
+                    if (data['message'] == 'You have no entries yet!'){
+                        // window.alert(data['message']);
+                        document.getElementById('entries').innerHTML=data['message'];
+                    }
+                    else {
+                        var myEntries = data['data'];
+                        console.log(myEntries);
+                        for (x in myEntries) {
+                            document.getElementById('entries').innerHTML += myEntries[x].title 
+                            + myEntries[x].entry_date 
+                            + "<br><hr>";
+                        }
+                    }
                 });
             }
         }
