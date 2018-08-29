@@ -7,14 +7,14 @@
 
 .card  {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     padding: 20px;
     background-image: url(../images/paper.jpg);
 }
 
 .card > div {
     height: 50px;
-    width: calc(100%/3);
+    /* width: calc(100%/3); */
     overflow: hidden;
 }
 
@@ -59,18 +59,16 @@ textarea {
 
 main {
     display: flex;
-    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     background-color: rgb(0, 0, 0, 0.5);
     margin-top: 100px;
+    min-height: 100vh;
 }
 
 main > div {
     width: 80%;
-    height: 100vh;
     margin: 20px;
-
 }
 
 hr {

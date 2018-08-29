@@ -2,7 +2,7 @@ function viewEntry() {
     var token = window.localStorage.getItem('access-token');
     var entryId = window.localStorage.getItem('entryId')
 
-    fetch(host + '/api/v1/entries/' + entryId, 
+    fetch(host + '/api/v1/entries/' + 7, 
     {
         method: 'GET',
         headers: {
@@ -29,7 +29,9 @@ function viewEntry() {
                     var title = myEntry.title;
                     var details = myEntry.details;
 
-                    document.getElementById('entry').innerHTML= title + "<br>" + details; 
+                    document.getElementById('entry').innerHTML= "<h1>" + title + "</h1>"
+                    + "<br>" 
+                    + "<div class='div-details'>" + details + "</div>"; 
                 });
             }
         }

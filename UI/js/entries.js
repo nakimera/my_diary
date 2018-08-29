@@ -16,7 +16,7 @@ function viewEntries() {
             if (response.status !=200) {
                 result = response.json();
                 result.then(function(data) {
-                    alert(data['message'])
+                    alert(data['message']);
                 });
             }
 
@@ -33,17 +33,15 @@ function viewEntries() {
                             var title = myEntries[x].title;
                             var details = myEntries[x].details ;
                             var entryId = myEntries[x].entry_id;
-                            entryIds = [];
-                            entryIds.push(entryId);
-                            console.log(entryIds);
 
                             document.getElementById('entries').innerHTML += "<a href='view.html'>" 
-                            + "<div class='input-title'>" + title + "</div>" 
-                            + "<div>" + myDate + "</div>"
-                            + "<div>" + details + "</div>"
+                            + "<div class='card'>"
+                            + "<div class='card-row'>" + title + "</div>" 
+                            + "<div class='card-row'>" + myDate + "</div>"
+                            + "<div class='card-row'>" + details + "</div>"
                             + "</a>" 
+                            + "</div>"
                             + "<br><hr>";
-                            window.localStorage.setItem('entryIds', entryIds);
                         }
                     }
                 });
