@@ -145,9 +145,17 @@ input {
     border-radius: 5px;
 }
 
-.fa-plus-circle , .fa-pencil{
+.fa-plus-circle {
     position: fixed;
     bottom: 20px;
+    right: 20px;
+    color: yellow;
+    font-size: 3.5em;
+}
+
+.fa-pencil {
+    position: fixed;
+    bottom: 100px;
     right: 20px;
     color: yellow;
     font-size: 3.5em;
