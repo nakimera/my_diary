@@ -1,74 +1,24 @@
-.btn-save {
-    margin-bottom: 20px;
-    color: white;
-    background-color: saddlebrown;
-}
-
-
-.card  {
-    display: flex;
-    flex-flow: column wrap;
-    padding: 20px;
-    background-image: url(../images/paper.jpg);
-}
-
-.card > div {
-    height: 50px;
-    /* width: calc(100%/3); */
-    overflow: hidden;
-}
-
-
-.entry {
-    width: 80%;
-    background-color: white;
-    margin-bottom: 30px;
-    height: 150vh;
-}
-
-.brown {
-    color: saddlebrown;
-    font-size: 18px;
-    font-weight: 900;
-}
-
-span {
-    background-color: saddlebrown;
-    font-size: 25px;
-    color: white;
-    padding: 20px 95px;
-}
-
-textarea {
-    width: 90%;
-    height: 80%;
-    margin-bottom: 20px;
-    border: solid 1px saddlebrown;
-    padding: 20px;
-    font-size: 1.8em;
-    border: none;
-    background-image: url('../images/desk.png');
-}
-
-.input-title {
-    border: none;
-    /* width: 92%; */
-    font-size: 1.5em;
-    color: saddlebrown;
-}
-
 main {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     background-color: rgb(0, 0, 0, 0.5);
     margin-top: 100px;
     min-height: 100vh;
 }
 
-main > div {
+.list {
+    display: flex;
+    flex-flow: column-reverse;
     width: 80%;
-    margin: 20px;
+    background-image: url(../images/paper.jpg);
+}
+
+.list > div {
+    height: 80px;
+    border-bottom: solid 8px black;
+    overflow: hidden;
+    padding: 20px;
 }
 
 hr {

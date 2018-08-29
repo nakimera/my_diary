@@ -34,14 +34,12 @@ function viewEntries() {
                             var details = myEntries[x].details ;
                             var entryId = myEntries[x].entry_id;
 
-                            document.getElementById('entries').innerHTML += "<a href='view.html'>" 
-                            + "<div class='card'>"
-                            + "<div class='card-row'>" + title + "</div>" 
-                            + "<div class='card-row'>" + myDate + "</div>"
-                            + "<div class='card-row'>" + details + "</div>"
-                            + "</a>" 
+                            document.getElementById('list').innerHTML += 
+                            "<div>" + title + "<span id='entryId'>" + entryId + "</span><br>" 
+                            + myDate + "<br>"
+                            + details 
                             + "</div>"
-                            + "<br><hr>";
+                            + "<br>";
                         }
                     }
                 });
