@@ -1,49 +1,53 @@
-function addEntry() {
-    title = document.getElementById('title').value;
-    details = document.getElementById('details').value;
-    var token = window.localStorage.getItem('access-token');
+// function addEntry() {
+//     // document.getElementById('action').innerHTML  
+//     // = "<button class='btn-logout btn-save' type='button'>" + + Done + "</button>" ;
 
-    var entry = {
-        title: title,
-        details: details
-    }
+//     let title = document.getElementById('title').value;
+//     let details = document.getElementById('details').value;
+//     let token = window.localStorage.getItem('access-token');
 
-    fetch(host + '/api/v1/entries', 
-    {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'access-token':  token
-        },
-        mode: 'cors',
-        body: JSON.stringify(entry)
-    })
+//     let entry = {
+//         title: title,
+//         details: details
+//     }
 
-    .then(
-        function(response) {
+//     fetch(host + '/api/v1/entries', 
+//     {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//             'access-token':  token
+//         },
+//         mode: 'cors',
+//         body: JSON.stringify(entry)
+//     })
 
-            if (response.status !=201) {
-                result = response.json();
-                result.then(function(data) {
-                    alert(data['message'])
-                });
-            }
+//     .then(
 
-            else {
-                result = response.json();
-                result.then(function(data) {
-                    window.alert(data['message']);
-                    window.location.href = '../UI/home.html';
-                });
-            }
-        }
-    )
+//         response => {
+
+//             if (response.status !=201) {
+//                 result = response.json();
+//                 result.then(data => {
+//                     alert(data['message'])
+//                 });
+//             }
+
+//             else {
+//                 result = response.json();
+//                 result.then(data => {
+//                     window.alert(data['message']);
+//                     window.location.href = '../UI/home.html';
+//                 });
+//             }
+//         }
+//     )
     
-    .catch(
-        function(error) {
-            console.log('Request failed', error);
-            alert('Ooops! Request failed. Please try again later');
-        }
-    )
-}
+//     .catch(
+//         function(error) {
+//             console.log('Request failed', error);
+//             alert('Ooops! Server down. Please try again later');
+//         }
+//     )
+// }
 

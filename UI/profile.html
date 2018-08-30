@@ -8,17 +8,17 @@
     <title>My Diary</title>
     <link rel="stylesheet" type="text/css" media="screen" href="styles/style.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="styles/profile.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/home.css" />
 </head>
 
 <body>
     <header>
-        <nav class="center">
-            <ul>
-                <li><a href="home.html" class="header-brand ">My Diary</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><button class="btn-logout" onclick="logOut()">Logout</button></li>
-            </ul>
-        </nav> 
+        <div class="header-right"></div>
+        <div class="header-left"><a href="home.html"> My diary</a></div>
+        <div class="header-right">
+            <div><button class="btn-logout" onclick="viewProfile"> PROFILE</button></div>
+            <div><button class="btn-logout" onclick="logOut()">LOGOUT</button></div>
+        </div>
     </header>
     <main>
         <div class="left">
@@ -41,5 +41,8 @@
             <div class="counter-footer">Diary entries</div>
         </div>
     </main>
-    <a href="entry.html" class="fa fa-plus-circle"></a>
+    <a href="entry.html" class="fa fa-plus-circle" onclick="addEntry()"></a>
+    <script src="js/global.js"></script>
+    <script src="js/entries.js"></script>
+    <script src="js/entry.js"></script>
 </body>

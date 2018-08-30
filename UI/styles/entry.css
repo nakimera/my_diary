@@ -2,9 +2,12 @@ main {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
-    background-color: rgb(0, 0, 0, 0.5);
-    margin-top: 150px;
+    background-color:  rgb(139, 69, 19, 0.8);
+    min-height: 100vh;
+}
+
+main > div {
+    margin-top: 105px;
 }
 
 .btn-save {
