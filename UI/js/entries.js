@@ -35,7 +35,7 @@ function viewEntries() {
                             let entryID = myEntries[x].entry_id;
 
                             document.getElementById('list').innerHTML += 
-                            "<div onclick=viewEntry("+ entryID +")>" 
+                            "<div class='details-card' onclick=viewEntry("+ entryID +")>" 
                             + title
                             +'<br>' 
                             + myDate + '<br>'

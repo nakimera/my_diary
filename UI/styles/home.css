@@ -15,9 +15,7 @@ main {
 }
 
 .list > div {
-    height: auto;
     margin: 8px 0;
-    overflow: hidden;
     padding: 20px;
     background-image: url(../images/paper.jpg);
     cursor: pointer;
@@ -25,4 +23,9 @@ main {
 
 hr {
     width: 100%;
+}
+
+.details-card {
+    overflow: hidden;
+    height: 80px;
 }
