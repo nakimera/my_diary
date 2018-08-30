@@ -1,5 +1,5 @@
 function viewEntries() {
-    var token = window.localStorage.getItem('access-token');
+    let token = window.localStorage.getItem('access-token');
 
     fetch(host + '/api/v1/entries', 
     {
@@ -27,21 +27,69 @@ function viewEntries() {
                         document.getElementById('entries').innerHTML=data['message'];
                     }
                     else {
-                        var myEntries = data['data'];
+                        let myEntries = data['data'];
                         for (x in myEntries) {
-                            var myDate = myEntries[x].entry_date;
-                            var title = myEntries[x].title;
-                            var details = myEntries[x].details ;
-                            var entryId = myEntries[x].entry_id;
+                            let myDate = myEntries[x].entry_date;
+                            let title = myEntries[x].title;
+                            let details = myEntries[x].details ;
+                            let entryID = myEntries[x].entry_id;
 
                             document.getElementById('list').innerHTML += 
-                            "<div>" + title + "<span id='entryId'>" + entryId + "</span><br>" 
-                            + myDate + "<br>"
+                            "<div onclick=viewEntry("+ entryID +")>" 
+                            + title
+                            +'<br>' 
+                            + myDate + '<br>'
                             + details 
-                            + "</div>"
-                            + "<br>";
+                            + "</div>";
                         }
                     }
+                });
+            }
+        }
+    )
+    
+    .catch(
+        function(error) {
+            console.log('Request failed', error);
+            alert('Ooops! Request failed. Please try again later');
+        }
+    )
+}
+
+
+function viewEntry(entryId) {
+    let token = window.localStorage.getItem('access-token');
+
+    fetch(host + '/api/v1/entries/' + entryId, 
+    {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'access-token':  token
+        },
+        mode: 'cors'
+    })
+
+    .then(
+        response => {
+            if (response.status !=200) {
+                let result = response.json();
+                result.then(function(data) {
+                    document.getElementById('list').innerHTML=data['message'];
+                });
+            }
+
+            else {
+                result = response.json();
+                result.then(function(data) {
+                    console.log(data);
+                    var myEntry = data['data'];
+                    var title = myEntry.title;
+                    var details = myEntry.details;
+
+                    document.getElementById('list').innerHTML = "<div> <h1>" + title + "</h1>"
+                    + "<br>" 
+                    + details + "</div>"; 
                 });
             }
         }

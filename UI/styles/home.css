@@ -11,14 +11,16 @@ main {
     display: flex;
     flex-flow: column-reverse;
     width: 80%;
-    background-image: url(../images/paper.jpg);
+    
 }
 
 .list > div {
-    height: 80px;
-    border-bottom: solid 8px black;
+    height: auto;
+    margin: 8px 0;
     overflow: hidden;
     padding: 20px;
+    background-image: url(../images/paper.jpg);
+    cursor: pointer;
 }
 
 hr {
