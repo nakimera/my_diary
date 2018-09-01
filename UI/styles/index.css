@@ -1,3 +1,28 @@
+h1 {
+    font-size: 3.2em;
+    text-align: center;
+    color: white;
+    font-weight: 980;
+    font-family: 'Courgette', cursive;
+    line-height: 70px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 25px;
+    color: saddlebrown;
+    font-family: 'Special Elite', cursive;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.1em;
+    text-align: center;
+    line-height: 1.5em;
+    font-family: cursive;
+    color: saddlebrown;
+}
 
 header{
     background-color: #fff;
