@@ -90,10 +90,12 @@ function viewEntry(entryId) {
                     var details = myEntry.details;
 
                     document.getElementById('list').innerHTML = "<div> <h6 id='title'>" + title + "</h6>"
+                    + "<i class='fa fa-pencil' onclick='modifyEntry()'></i>"
+                    + "<div class='pop-up'>Edit</div>"
                     + "<br>" 
                     + "<p id = 'details'>" + details + "</p>" 
                     + "</div>"
-                    + "<i class='fa fa-pencil' onclick='modifyEntry()'></i>"; 
+                    ; 
                 });
             }
         }
@@ -147,10 +149,10 @@ function saveChanges () {
     .then(
         response => {
 
-            if (response.status !=201) {
+            if (response.status !=200) {
                 result = response.json();
                 result.then(data => {
-                    alert(data['message'])
+                    alert(data['message']);
                 });
             }
 
@@ -158,7 +160,7 @@ function saveChanges () {
                 result = response.json();
                 result.then(data => {
                     window.alert(data['message']);
-                    window.location.href = '../UI/home.html';
+                    viewEntry(entryId);
                 });
             }
         }
