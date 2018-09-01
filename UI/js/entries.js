@@ -35,10 +35,10 @@ function viewEntries() {
                             let myDate = myEntries[x].entry_date;
                             let title = myEntries[x].title;
                             let details = myEntries[x].details ;
-                            let entryID = myEntries[x].entry_id;
+                            let entryId = myEntries[x].entry_id;
 
                             document.getElementById('list').innerHTML += 
-                            "<div class='details-card' onclick=viewEntry("+ entryID +")>" 
+                            "<div class='details-card' onclick=viewEntry("+ entryId +")>" 
                             + title
                             +'<br>' 
                             + myDate + '<br>'
@@ -60,6 +60,7 @@ function viewEntries() {
 
 // view single entry
 function viewEntry(entryId) {
+    window.localStorage.setItem('entryId', entryId); 
 
     fetch(host + '/api/v1/entries/' + entryId, 
     {
@@ -88,9 +89,10 @@ function viewEntry(entryId) {
                     var title = myEntry.title;
                     var details = myEntry.details;
 
-                    document.getElementById('list').innerHTML = "<div> <h1>" + title + "</h1>"
+                    document.getElementById('list').innerHTML = "<div> <h6 id='title'>" + title + "</h6>"
                     + "<br>" 
-                    + details + "</div>"
+                    + "<p id = 'details'>" + details + "</p>" 
+                    + "</div>"
                     + "<i class='fa fa-pencil' onclick='modifyEntry()'></i>"; 
                 });
             }
@@ -105,7 +107,32 @@ function viewEntry(entryId) {
 }
 
 // function to modify an entry
-function modifyEntry(entryId) {
+function modifyEntry() {
+
+    let title = document.getElementById('title').innerHTML;
+    let details = document.getElementById('details').innerHTML;
+
+    document.getElementById('list').innerHTML = 
+    "<div class='entry center'>" 
+    + "<input type='text' class='input-title' placeholder='Enter new title ...' id='title'>"
+    + "<textarea id='details'>" + details
+    + "</textarea>"
+    + "<button class='btn-logout btn-save' type='button' onclick='saveChanges()'>Save</button>"
+    + "</div>";
+
+}
+
+// function to save changes to an entry
+function saveChanges () {
+
+    let entryId = window.localStorage.getItem('entryId'); 
+    let title = document.getElementById('title').value;
+    let details = document.getElementById('details').value;
+
+    let entry = {
+        title: title,
+        details: details
+    }
 
     fetch(host + '/api/v1/entries/' + entryId,
     {
@@ -114,38 +141,34 @@ function modifyEntry(entryId) {
             'Content-Type': 'application/json',
             'access-token':  token
         },
-        mode: 'cors'
+        mode: 'cors',
+        body: JSON.stringify(entry)
     })
-
     .then(
         response => {
-            
-            window.location.href = '../UI/entry.html';
-            // if (response.status !=200) {
-            //     let result = response.json();
-            //     result.then(data => {
-            //         document.getElementById('list').innerHTML=data['message'];
-            //     });
-            // }
 
-            // else {
-            //     result = response.json();
-            //     result.then(data => {
-            //         console.log(data);
-            //         var myEntry = data['data'];
-            //         var title = myEntry.title;
-            //         var details = myEntry.details;
+            if (response.status !=201) {
+                result = response.json();
+                result.then(data => {
+                    alert(data['message'])
+                });
+            }
 
-            //         document.getElementById('list').innerHTML = "<div> <h1>" + title + "</h1>"
-            //         + "<br>" 
-            //         + details + "</div>"; 
-            //     });
-            // }
+            else {
+                result = response.json();
+                result.then(data => {
+                    window.alert(data['message']);
+                    window.location.href = '../UI/home.html';
+                });
+            }
         }
     )
-
-    .catch(error => {
+    
+    .catch(
+        function(error) {
+            console.log('Request failed', error);
             alert('Ooops! Server down. Please try again later');
         }
     )
+    
 }
