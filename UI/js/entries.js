@@ -39,7 +39,7 @@ function viewEntries() {
 
                             document.getElementById('list').innerHTML += 
                             "<div class='details-card' onclick=viewEntry("+ entryId +")>" 
-                            + title
+                            + "<h3>" + title + "</h3><hr>"
                             +'<br>' 
                             + myDate + '<br>'
                             + details 
@@ -89,10 +89,8 @@ function viewEntry(entryId) {
                     var title = myEntry.title;
                     var details = myEntry.details;
 
-                    document.getElementById('list').innerHTML = "<div> <h6 id='title'>" + title + "</h6>"
-                    + "<i class='fa fa-pencil' onclick='modifyEntry()'></i>"
-                    + "<div class='pop-up'>Edit</div>"
-                    + "<br>" 
+                    document.getElementById('list').innerHTML = "<div> <h2 id='title'>" + title + "</h2>"
+                    + "<i class='fa fa-pencil' onclick='modifyEntry()'></i><hr>"
                     + "<p id = 'details'>" + details + "</p>" 
                     + "</div>"
                     ; 

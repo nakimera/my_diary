@@ -10,24 +10,25 @@
     <link rel="stylesheet" type="text/css" media="screen" href="styles/home.css" />
 </head>
 <body>
-    <header>
-        <div class="header-right"></div>
-        <div class="header-left"><a href="home.html"> My diary</a></div>
-        <div class="header-right">
-            <div><button class="btn-logout" onclick="viewProfile"> PROFILE</button></div>
-            <div><button class="btn-logout" onclick="logOut()">LOGOUT</button></div>
+    <div>
+        <div class="header">
+            <div class="header-left"></div>
+            <div class="header-center"><a href="home.html"> My diary</a></div>
+            <div class="header-right">
+                <div><button class="btn-logout" onclick="viewProfile"> PROFILE</button></div>
+                <div><button class="btn-logout" onclick="logOut()">LOGOUT</button></div>
+            </div>
         </div>
-    </header>
-    <main>
-        <div class="entry center"> <br>
-            <input type="text" placeholder="Title here ..." class="input-title" id="title"> 
-            <textarea id="details" placeholder="Write something ..."></textarea>
-            <button class="btn-logout btn-save" type="button" onclick="addEntry()">Save</button>
-            <!-- <button class="btn-logout btn-save" type="button" id='action'>Done</button> -->
-            <div id="action"></div>
+        <div class="container">
+            <div class="entry center"> <br>
+                <input type="text" placeholder="Title here ..." class="input-title" id="title"> 
+                <textarea id="details" placeholder="Write something ..."></textarea>
+                <button class="btn-logout btn-save" type="button" onclick="addEntry()">Save</button>
+                <div id="action"></div>
+            </div>
+            <a href="entry.html" class="fa fa-plus-circle"></a>
         </div>
-        <a href="entry.html" class="fa fa-plus-circle"></a>
-    </main>
+    </div>
     <script src="js/entry.js"></script>
     <script src="js/global.js"></script>
 </body>
