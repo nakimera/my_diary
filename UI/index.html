@@ -11,31 +11,34 @@
 </head>
 
 <body>
-    <header>
-        <a href="index.html" class="header-brand">My Diary</a>
-    </header>
-    <main>
-        <div class="left">
-            <h1>Pen down your thoughts and feelings ...</h1>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="header-brand">My Diary</a>
         </div>
-        <div class="right">
-            <form>
-                <fieldset>
-                    <h2>Login</h2>
-                    <input type="email" class="input-signup" placeholder="example@gmail.com" required id="email">
-                    <input type="password" class="input-signup" placeholder="password" required id="password">
-                    <button class="btn-login" type="button" onclick="loginUser()">Login</button>
-                    <div>
-                        <h3 id="message" style=" color: red;"></h3>
-                        <h3>
-                            Have no account? <a href="signup.html"> Sign up!</a>
-                        </h3>
-                    </div>
-                </fieldset>
-            </form>
+        <div class="main">
+            <div class="main-left">
+                <h1>Pen down your thoughts and feelings ...</h1>
+            </div>
+            <div class="main-right">
+                <form>
+                    <fieldset>
+                        <h2>Login</h2>
+                        <input type="email" class="input-signup" placeholder="example@gmail.com" required id="email">
+                        <input type="password" class="input-signup" placeholder="password" required id="password">
+                        <button class="btn-login" type="button" onclick="loginUser()">Login</button>
+                        <div>
+                            <h3 id="message" style=" color: red;"></h3>
+                            <h3>
+                                Have no account? <a href="signup.html"> Sign up!</a>
+                            </h3>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
         </div>
-    </main>
+    </div>
     <script src="js/login.js"></script>
     <script src="js/global.js"></script>
 </body>
+</html>
 
