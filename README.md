@@ -109,7 +109,7 @@ $ pytest
  ```
 
 ## Deployment  sites
-[User interfaces](https://nakimera.github.io/My-Diary/)
+[User interfaces](https://nakimera.github.io/my_diary_app/)
 
 [Heroku](https://my-diary-app-np.herokuapp.com) 
 
