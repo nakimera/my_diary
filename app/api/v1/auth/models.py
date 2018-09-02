@@ -57,7 +57,7 @@ class User():
 
         try:
             payload = {
-                'exp' : datetime.datetime.utcnow() + datetime.timedelta(minutes=90),
+                'exp' : datetime.datetime.utcnow() + datetime.timedelta(minutes=60*24),
                 'iat' : datetime.datetime.utcnow(),
                 'sub' : user_id
             }
