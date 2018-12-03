@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css?family=Catamaran);
+@import url(https://fonts.googleapis.com/css?family=Courgette|Handlee|Merienda|Special+Elite);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+
+html, body {
+    background-image: url(../images/2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    line-height:1;
+    margin:0;
+    padding:0;
+    border:0;
+    min-height: 100vh;
+}
+
+*{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, fieldset, div {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+ 
+h5 {
+    font-size: 200px;
+    color: saddlebrown;
+    text-align: center;
+    padding: 20px;
+}
+
+p {
+    margin: 50px;
+    text-align: left;
+    font-size: 25px;
+}
+
+form {
+    padding: 20px;
+    width: 290px;
+    background-color: white;
+}
+
+input {
+    width: 95%;
+    height: 30px;
+    margin: 20px 0;
+    border: solid 1px saddlebrown;
+    padding-left: 10px;
+}
+
+.center {
+    text-align: center;
+}
+
+.btn-logout {
+    color: saddlebrown;
+    background-color: white;
+    border: solid saddlebrown 1px;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.fa-plus-circle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    font-size: 3em;
+}
+
+.fa-pencil {
+    float: right;
+    color: saddlebrown;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+

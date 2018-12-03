@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Diary</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/entry.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/home.css" />
+</head>
+<body>
+    <div>
+        <div class="header">
+            <div class="header-left"></div>
+            <div class="header-center"><a href="home.html"> My diary</a></div>
+            <div class="header-right">
+                <div><button class="btn-logout" onclick="viewProfile"> PROFILE</button></div>
+                <div><button class="btn-logout" onclick="logOut()">LOGOUT</button></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="entry center"> <br>
+                <input type="text" placeholder="Title here ..." class="input-title" id="title"> 
+                <textarea id="details" placeholder="Write something ..."></textarea>
+                <button class="btn-logout btn-save" type="button" onclick="addEntry()">Save</button>
+                <div id="action"></div>
+            </div>
+            <a href="entry.html" class="fa fa-plus-circle"></a>
+        </div>
+    </div>
+    <script src="js/entry.js"></script>
+    <script src="js/global.js"></script>
+</body>

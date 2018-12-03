@@ -1,0 +1,119 @@
+body > div {
+    background-color:  rgb(139, 69, 19, 0.8);
+    min-height: 100vh;
+}
+
+.header{
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+}
+
+.header > div {
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+
+.header-center {
+    width: 60%;
+} 
+
+.header-center a {
+    font-family: 'Special Elite', cursive;
+    font-size: 1.6em;
+    letter-spacing: 2.5px;
+    font-weight: 900;
+    color: rgb(139, 69, 19);
+    text-transform: uppercase;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header-right, .header-left {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.header-right > div {
+    width: 6em;
+    display: flex;
+    float: right;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.list {
+    display: flex;
+    flex-flow: column-reverse;
+    width: 80%;
+}
+
+.list > div {
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.details-card {
+    overflow: hidden;
+    height: 100px;
+    border-radius: 10px;
+}
+
+div.details-card:hover {
+    /* font-weight: 600; */
+    font-size: 1.2em;
+}
+
+.entry {
+    background-color: white;
+    margin-bottom: 30px;
+    height: 150vh;
+}
+
+
+textarea {
+    color: white;
+    width: 90%;
+    height: 80%;
+    margin-bottom: 20px;
+    border: solid 1px saddlebrown;
+    padding: 20px;
+    font-size: 1.8em;
+    border: none;
+    background-image: url('../images/adult.jpg');
+}
+
+.input-title {
+    border: none;
+    font-size: 1.5em;
+    color: saddlebrown;
+    width: 95%;
+}
+
+h3 {
+    color: saddlebrown;
+    font-size: 1.2em;
+    font-family: 'Special Elite', cursive;
+}
+
+hr {
+    color: saddlebrown;
+}
+ 
+h2 {
+    color: saddlebrown;
+    font-size: 1.8em;
+    font-family: 'Special Elite', cursive;
+}
